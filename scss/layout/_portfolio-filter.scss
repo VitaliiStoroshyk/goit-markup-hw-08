@@ -1,0 +1,127 @@
+.section-filter {
+  background: var(--hero-color);
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  padding: 6px 22px;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: 0;
+  color: var(--primary-title-color);
+}
+
+.filter-btn {
+  background: var(--beckground-btn-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: var(--accent-color);
+    color: var(--hero-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.blok-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-title-color);
+}
+
+.filter-picture-text {
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--hero-color);
+
+  .blok-item:hover & {
+    transform: translateY(0);
+  }
+}
+
+.blok-text {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.blok-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.blok-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-picture-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  line-height: 1.5;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  background: var(--hero-color);
+  box-sizing: border-box;
+}
