@@ -1,8 +1,4 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
 
@@ -10,8 +6,8 @@
   border-bottom: 1px solid #ececec;
 
   @media screen and (min-width: 768px) {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -48,6 +44,11 @@
   font-size: 24px;
   line-height: 1.16;
   color: var(--accent-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header-container__logo-studio {
@@ -56,6 +57,11 @@
   font-size: 24px;
   line-height: 1.16;
   color: var(--primary-title-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .site-nav {
@@ -121,9 +127,6 @@
 }
 
 .header-connect__item {
-  display: flex;
-  align-items: center;
-
   @media screen and (max-width: 1199px) {
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -139,6 +142,7 @@
 
 .header-connect__mail {
   display: flex;
+  align-items: baseline;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.16;
@@ -158,9 +162,10 @@
   }
 }
 
-.header-connect__icon {
-  margin-right: 8px;
-  height: 100%;
+.header-connect__icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
   fill: currentColor;
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -170,15 +175,36 @@
     color: var(--accent-color);
   }
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 10px;
+  @media screen and (max-width: 1199px) {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.header-connect__icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 8px;
+    width: 10px;
+    height: 14px;
   }
 }
 
 .header-connect__tel {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.16;
@@ -201,8 +227,8 @@
 // =====MOBILE__HEADER========
 
 .burger-btn {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 16px;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
@@ -216,8 +242,8 @@
 }
 
 .burger-btn__icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 16px;
 
   &:hover {
     fill: var(--accent-color);
