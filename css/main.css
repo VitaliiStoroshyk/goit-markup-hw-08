@@ -1026,25 +1026,60 @@ img {
 
 .customers-title {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   text-align: center;
-  line-height: 1.16;
+  line-height: 1.17;
   color: var(--primary-title-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-title {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .customers-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1199px) {
+  .customers-list {
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .customers-item {
-  width: 170px;
   height: 92px;
 }
 
-.customers-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .customers-item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-item {
+    width: 170px;
+  }
+  .customers-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .customers-link {
